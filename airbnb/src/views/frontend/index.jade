@@ -1,59 +1,118 @@
 extends ../layout
-block stylesheets
-    link(rel="stylesheet", href="index.css")
-//- block scripts
-    //- script(text="text/javascript",href="/frontend/index.js")
+block stylesheet
+    link(rel="stylesheet", href="/frontend/index.css")
 block content
-    .homeSlider
-        .carousel.slide(id="homeCarousel" data-ride="carousel")
-        ol.carousel-indicators
-            li(data-target="#homeCarousel" data-slide-to="0" class="active")
-            li(data-target="#homeCarousel" data-slide-to="1")
-            li(data-target="#homeCarousel" data-slide-to="2")
-        .carousel-inner(role="listbox")
-            .item.active
-                img(src="", alt="")
-                .carousel-caption slider描述
-            .item.active
-                img(src="", alt="")
-                .carousel-caption slider描述
-            .item.active
-                img(src="", alt="")
-                .carousel-caption slider描述
-        a.left.carousel-control(href="#homeCarousel" role="button" data-slide="prev")
-            span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
-        a.right.carousel-control(href="#homeCarousel" role="button" data-slide="next")
-            span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
-    .airbnbSpacial
-        .airContainer
-            .text-center
-                i.icon
-                .value-prop-text
-                    .h3
-                        strong 价格实惠
-                    div
-                        small 比同等酒店价格更低
-            .text-center
-                i.icon
-                .value-prop-text
-                    .h3
-                        strong 居家体验
-                    div
-                        small 走到哪里都是家的感觉
-            .text-center
-                i.icon
-                .value-prop-text
-                    .h3
-                        strong 特色奇居
-                    div
-                        small 树屋城堡应有尽有
-            .text-center
-                i.icon
-                .value-prop-text
-                    .h3
-                        strong 融入当地
-                    div
-                        small 像当地人一样生活
-    .cityShow
-    .belongAnywhere
+    .airbnb-header(id="header")
+        .regular-header(id="new-header")
+            .header-item.airbnb-logo.pull-left
+                a(href="/") Airbnb
+                    i.icon.login-show
+                    i.icon.logout-show
+            .header-item.pull-right.logout-show
+                a(href="/login") 登录
+            .header-item.pull-right.logout-show
+                a(href="/register") 注册
+            .header-item.pull-right.help
+                a(href="/help")
+                    span 帮助
+            .header-item.pull-right.become-a-host
+                a(href="#")
+                    span.btn.btn-small.btn-become-a-host 成为房东
+    .home-header-wrapper.container-fluid
+        .slider-wrapper
+            .carousel.slide(id="homeCarousel" data-ride="carousel")
+                ol.carousel-indicators
+                    li(data-target="#homeCarousel" data-slide-to="0" class="active")
+                    li(data-target="#homeCarousel" data-slide-to="1")
+                    li(data-target="#homeCarousel" data-slide-to="2")
+                .carousel-inner(role="listbox")
+                    .item.active
+                        .slider-caption 趁青春，去猎"奇"
+                        img(src="https://z2.muscache.com/airbnb/static/homepages/china/campaigns/taiwan/header-734f7ca5ad58d7382c99172ebe61e711.jpg")
+                    .item
+                        .slider-caption 睡在山海间，住进人情里
+                        img(src="", alt="")
+                    .item
+                        .slider-caption 住在城市中心
+                        img(src="", alt="")
+                a.left.carousel-control(href="#homeCarousel" role="button" data-slide="prev")
+                    span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                a.right.carousel-control(href="#homeCarousel" role="button" data-slide="next")
+                    span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+        .searchbar-wrapper.container
+            .searchbar.row
+                form(id="searchbar-form", method="get", action="")
+                    .search-options
+                        label.searchbar-where-you-go
+                            input(type="text" placeholder="你想去哪里？")
+                        label.searchbar-in-date
+                            input(type="text" placeholder="入住日期")
+                        label.searchbar-out-date
+                            input(type="text" placeholder="退房日期")
+                        label.searchbar-guests
+                            .guests-select
+                                select.guests
+                                    options(value="0") 1位房客
+                                    options(value="1") 2位房客
+                                    options(value="2") 3位房客
+                                    options(value="3") 4位房客
+                                    options(value="4") 5位房客
+                    button.btn.btn-large(type="submit") 搜索
+    .airbnb-special-section
+        .air-container.container
+            .row
+                .special-item.col-xs-3
+                    i.icon
+                    .value-prop-text
+                        .h3
+                            strong 价格实惠
+                        div
+                            small 比同等酒店价格更低
+                .special-item.col-xs-3
+                    i.icon
+                    .value-prop-text
+                        .h3
+                            strong 居家体验
+                        div
+                            small 走到哪里都是家的感觉
+                .special-item.col-xs-3
+                    i.icon
+                    .value-prop-text
+                        .h3
+                            strong 特色奇居
+                        div
+                            small 树屋城堡应有尽有
+                .special-item.col-xs-3
+                    i.icon
+                    .value-prop-text
+                        .h3
+                            strong 融入当地
+                        div
+                            small 像当地人一样生活
+    .discovery-section.container
+        .section-intro
+            h3 周末好去处
+            p 发现离家近的好地方
+        .discovery-list.row
+            .discovery-item-wrapper.col-xs-4
+                .discovery-item.item0
+                    .discovery-caption 清迈
+            .discovery-item-wrapper.col-xs-4
+                .discovery-item.item1
+                    .discovery-caption 首尔
+            .discovery-item-wrapper.col-xs-4
+                .discovery-item.item2
+                    .discovery-caption 曼谷
+        .discovery-btn-wrapper.row
+            .discovery-btn.col-xs-4.col-xs-offset-4
+                a.btn.btn-default(href="#")
+                    span 查看所有目的地
+    .discovery-section.container
+        .section-intro
+            h3 探索世界
+            p 搜罗全球热门目的地
+        .discovery-list.row
+            
+    .city-show-section
+    .belong-anywhere-section
 

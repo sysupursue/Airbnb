@@ -1,2 +1,93 @@
-.homeSlider
+// 样式编写顺序：宽高信息、位置信息
+
+.airbnb-header
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    background: transparent;
+
+    .regular-header
+        .header-item
+            height: 61px;
+            line-height: 61px
+            a 
+                padding: 20px
+                color: white
+        .btn-become-a-host
+            border-width:2px
+            border-color:white
+            &:hover
+                background: rgba(0,0,0,0.6)
+.home-header-wrapper
+    position: relative
     height: 400px
+
+    .slider-caption
+        position: absolute
+        font-size: 45px
+        margin: 0 auto
+        width: 100%
+        height: 400px
+        line-height: 400px
+        text-align: center
+        color: white
+.container-fluid
+    padding: 0px !important
+
+    .carousel-inner img 
+        height: 100% !important
+
+    .searchbar-wrapper
+        position: absolute
+        left: 50%
+        bottom: 50px
+        width: 712px
+        height: 68px
+        margin-left: -356px
+        white-space:nowrap
+
+        background-color:rgba(0,0,0,0.6)
+
+        .searchbar
+            padding: 12px
+            .search-options
+                float: left
+                label
+                    margin:0px -1px 0px 0px
+                    input
+                        height: 41px
+                    .searchbar-guests
+                        height: 41px
+.airbnb-special-section
+    .special-item
+        float: left
+        text-align: center
+.discovery-section
+    .section-intro
+        text-align: center
+        margin-top:25px 
+        margin-bottom: 36px
+    .discovery-item
+        height: 344px
+        background-color: #f5f5f5
+        background-position: center
+        background-size: cover
+        .discovery-caption
+            width: 100%
+            text-align: center
+            line-height: 344px
+            color: white
+            font-size: 25px
+    .item0
+        background-image: url('https://a1.muscache.com/ic/discover/176?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px')
+    .item1
+        background-image: url('https://a0.muscache.com/ic/discover/377?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px')
+    .item2
+        background-image: url('https://a2.muscache.com/ic/discover/173?interpolation=lanczos-none&output-format=jpg&output-quality=70&v=33b4f2&downsize=675px:675px')
+    
+    .discovery-btn
+        a
+            width: 100%
+            border-radius: 0px
+            margin-top: 50px 
+            margin-bottom: 50px
