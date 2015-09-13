@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    block stylesheet
+        //- link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel="stylesheet", href="/vendor/bootstrap/dist/css/bootstrap.min.css")
+
+    block scripts
+        script(text="text/javascript",href="/vendor/bootstrap/dist/css/bootstrap.min.js")
+        script(text="text/javascript",href="/vendor/jquery/dist/jquery.min.js")
+
+  body
+    block content

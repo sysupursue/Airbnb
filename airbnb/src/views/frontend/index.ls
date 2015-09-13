@@ -1,0 +1,2 @@
+$ ->
+    $('.homeCarousel').carousel
