@@ -112,7 +112,169 @@ block content
             h3 探索世界
             p 搜罗全球热门目的地
         .discovery-list.row
-            
-    .city-show-section
-    .belong-anywhere-section
+    .belong-anywhere-section.container-fluid
+        .belong-wrapper
+                .carousel.slide(id="belongAnywhere" data-ride="carousel")
+                .carousel-inner(role="listbox")
+                    .item.active
+                        .belong-slider-caption 
+                            span 家在四方
+                            span Airbnb房东在世界各地缔造一个个有归属感的家.
+                        img(src="https://z2.muscache.com/airbnb/static/homepages/china/campaigns/taiwan/header-734f7ca5ad58d7382c99172ebe61e711.jpg")
+                    .item
+                        .belong-slider-caption 睡在山海间，住进人情里
+                        img(src="", alt="")
+                    .item
+                        .belong-slider-caption 住在城市中心
+                        img(src="", alt="")
+                a.left.carousel-control(href="#belongAnywhere" role="button" data-slide="prev")
+                    span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                a.right.carousel-control(href="#belongAnywhere" role="button" data-slide="next")
+                    span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                ol.carousel-indicators
+                    li(data-target="#belongAnywhere" data-slide-to="0" class="active")
+                    li(data-target="#belongAnywhere" data-slide-to="1")
+                    li(data-target="#belongAnywhere" data-slide-to="2")
+    .community-section.container-fluid
+        .community-wrapper
+            .community-title.text-center
+                h3 我们的社区
+            ul.community-container.row
+                li.col-xs-3
+                    .community-item
+                        a(href="/")
+                            .item-cover
+                            .item-content
+                                .item-head.text-center
+                                    img(src="https://z1.muscache.com/airbnb/static/homepages/create-logo2-54abba61cb00e99ea9c5aee512eebe00.png")
+                                .item-body.text-center
+                                    img(src="https://z1.muscache.com/airbnb/static/homepages/create-img-32169a44fdeb55f73380e51162f51e27.png")
+                                .item-caption
+                                    h3 创造属于您的Airbnb
+                                    p 创造属于您的标志，分享属于您的故事！
+                li.col-xs-3
+                    .community-item
+                        a(href="/")
+                            .item-cover
+                            .item-content
+                                .item-head
+                                .item-caption
+                                    strong Alice & Chris
+                                    .item-caption-describe 不管是跨洋过海还是跨城郊游，Alice & Chris总是寻找着最本真最当地化的体验。
+                                    br 
+                                    br 
+                                    u 了解如何通过Airbnb旅行。
+                li.col-xs-3
+                    .community-item
+                        a(href="/")
+                            .item-cover
+                            .item-content.travelling
+                                .item-head
+                                .item-caption
+                                    strong Alice & Chris
+                                    .item-caption-describe 不管是跨洋过海还是跨城郊游，Alice & Chris总是寻找着最本真最当地化的体验。
+                                    br 
+                                    br 
+                                    u 了解如何通过Airbnb旅行。
+                li.col-xs-3
+                    .community-item
+                        a(href="/")
+                            .item-cover
+                            .item-content
+                                .item-head
+                                .item-caption
+                                    strong Alice & Chris
+                                    .item-caption-describe 不管是跨洋过海还是跨城郊游，Alice & Chris总是寻找着最本真最当地化的体验。
+                                    br 
+                                    br 
+                                    u 了解如何通过Airbnb旅行。
+    .trust-section.container-fluid
+        .trust-section-wrapper.container
+            .trust-title.text-center
+                h3 以信任为基础的社区
+            .trust-wrapper.row
+                .trust-item.text-center.col-xs-4
+                    span icon
+                    h4 微博验证
+                    p  使用您的微博帐户登录以验证您的身份。
+                        a(href="/") 了解更多
+                .trust-item.text-center.col-xs-4
+                    span icon
+                    h4 可信赖的服务
+                    p  维护Airbnb社区的信任和安全是我们的首要任务
+                        a(href="/") 了解更多
+                .trust-item.text-center.col-xs-4
+                    span icon
+                    h4 安全支付
+                    p  支付宝付款现已面向中国用户开通，欢迎使用。
+                        a(href="/") 了解更多
+    .airbnb-footer
+        footer.container
+            .footer-info.row
+                .col-xs-3.col-xs-offset-1
+                    .contact-number 
+                        客服电话
+                        br 
+                        国内：400-890-0309
+                        br 
+                        海外：+86-10-5904-5310
+                .col-xs-2.col-xs-offset-1
+                    h3 公司信息
+                    ul.company-info-list
+                        li 
+                            a(href="#") 关于
+                        li 
+                            a(href="#") 工作机会
+                        li 
+                            a(href="#") 新闻
+                        li 
+                            a(href="#") 博客
+                        li 
+                            a(href="#") 帮助
+                        li 
+                            a(href="#") 政策
+                        li 
+                            a(href="#") 灾难响应
+                        li 
+                            a(href="#") 条款与隐私
+                .col-xs-2 
+                    h3 发现
+                    ul.discovery-list
+                        li 
+                            a(href="#") 信任与安全
+                        li 
+                            a(href="#") 邀请好友
+                        li 
+                            a(href="#") 礼品卡
+                        li 
+                            a(href="#") Airbnb精选
+                        li 
+                            a(href="#") 移动版
+                        li 
+                            a(href="#") 支持纽约市
+                        li 
+                            a(href="#") 商务差旅
+                        li 
+                            a(href="#") 网站地图
+                .col-xs-2 
+                    h3 出租
+                    ul.rent-list
+                        li 
+                            a(href="#") 为什么要出租?
+                        li 
+                            a(href="#") 好客之道
+                        li 
+                            a(href="#") 房东义务
+                        li 
+                            a(href="#") 居家安全
+            hr 
+            .text-center 
+                h3 关注我们
+                ul.focus-list
+                    li 
+                        a(href="#") 微博
+                    li 
+                        a(href="#") 领英
+                .text-muted © Airbnb, Inc.
+
 
